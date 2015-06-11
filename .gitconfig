@@ -1,0 +1,7 @@
+[user]
+	email = alexa.dewit@gmail.com
+	name = Alexa DeWit
+[core]
+	editor = vim
+[merge]
+	tool = meld
