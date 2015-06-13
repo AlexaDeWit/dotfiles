@@ -7,6 +7,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
