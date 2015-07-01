@@ -71,3 +71,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "Close vim if only nerdtree remains
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"Ignores for CtrlP
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/target/*     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
