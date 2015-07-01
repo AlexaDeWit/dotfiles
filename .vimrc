@@ -8,6 +8,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'szw/vim-tags'
 Bundle 'tpope/vim-rails'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
