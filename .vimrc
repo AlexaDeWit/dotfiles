@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'szw/vim-tags'
+Plugin 'flazz/vim-colorschemes'
 Bundle 'tpope/vim-rails'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
@@ -56,7 +57,11 @@ set background=dark
 set sw=2
 set ts=2
 set sts=2
-colorscheme solarized
+
+"Enable 256 colors
+set t_Co=256
+colorscheme last256
+
 
 set splitbelow
 
