@@ -11,6 +11,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'szw/vim-tags'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mattn/emmet-vim'
 Bundle 'tpope/vim-rails'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
@@ -85,3 +86,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Configuration for vim-tags
 let g:vim_tags_auto_generate = 1
+
+"Emmet config
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
