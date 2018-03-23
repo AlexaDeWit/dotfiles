@@ -10,16 +10,14 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #
 
-exec xset dpms 180
-exec xset s 120
+bindsym $mod+ctrl+l exec "~/.local/bin/fuzzy_lock.sh"
+exec xautolock -time 15 -locker '~/.local/bin/fuzzy_lock.sh' &
 
 set $dmenu "dmenu -i"
 set $term "gnome-terminal"
 
 #STARTUP APPLICATIONS
 exec unity-settings-daemon
-exec xsetroot -solid "#2E0854"
-
 
 #Visual Theming
 new_window pixel 2
@@ -27,7 +25,9 @@ new_window pixel 2
 #USABILITY
 workspace_auto_back_and_forth yes
 focus_follows_mouse no
+bindsym --release Print exec "scrot -m '/home/alexa/Pictures/Screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
+bindsym $mod+m move workspace to output right
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
