@@ -39,6 +39,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'parsonsmatt/intero-neovim'
 
 Plug 'neovimhaskell/haskell-vim'
+Plug 'nbouscal/vim-stylish-haskell'
 
 Plug 'elmcast/elm-vim'
 " Initialize plugin system
