@@ -1,7 +1,17 @@
+[core]
+	excludesfile = /home/alexa/.config/git/ignore
+	editor = vim
 [user]
 	email = alexa.dewit@gmail.com
-	name = Alexa DeWit
-[core]
-	editor = vim
+	name = Alexandra DeWit
 [merge]
 	tool = meld
+[pull]
+	rebase = true
+	default = current
+[alias]
+	pushf = push origin --force-with-lease
+[push]
+	default = current
+[branch]
+	autoSetupMerge = always

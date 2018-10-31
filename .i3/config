@@ -17,7 +17,17 @@ set $dmenu "dmenu -i"
 set $term "gnome-terminal"
 
 #STARTUP APPLICATIONS
-exec unity-settings-daemon
+exec xrandr --output HDMI-1-1 --mode 2560x1440
+exec /usr/lib/gnome-settings-daemon/gsd-rfkill
+exec /usr/lib/gnome-settings-daemon/gsd-mouse
+
+#STARTUP USERLAND WORKSPACE APPLICATIONS
+exec google-chrome
+exec slack
+exec discord
+exec "/home/alexa/.local/bin/idea-IU-173.4548.28/bin/idea.sh %f"
+exec gnome-control-center
+exec spotify
 
 #Visual Theming
 new_window pixel 2
@@ -126,12 +136,31 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
+#Specify workspace displays
+workspace "2:code" output HDMI-1-1
+workspace "3:docs" output HDMI-1-1
+workspace "4:IM" output HDMI-1-1
+workspace 10 output HDMI-1-1
+workspace "1:www" output eDP-1-1
+workspace "6:music" output HDMI-1-1
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+#Workspace Assignments
+assign [title="Chrome"] "1:www"
+assign [title="Nautilus"] "5:tools"
+assign [class="spotify"] "6:music"
+assign [title="Slack"] "4:IM"
+assign [title="Discord"] "4:IM"
+assign [title="Hexchat"] "4:IM"
+assign [title="Settings"] 10
+assign [class="jetbrains-idea"] "2:code"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
