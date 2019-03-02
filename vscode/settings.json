@@ -1,0 +1,25 @@
+{
+    "languageServerHaskell.useCustomHieWrapper": true,
+    "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
+    "workbench.colorTheme": "Snazzy Operator",
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "languageServerHaskell.liquidOn": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "elixirLS.projectDir": ".",
+    "editor.tabCompletion": "on",
+    "window.titleBarStyle": "custom",
+    "files.watcherExclude": {
+      "**/bower_components/**": true,
+      "**/dist/**": true,
+      "**/output/**": true
+    },
+    "extensions.ignoreRecommendations": true,
+    "powermode.enabled": true,
+}
