@@ -1,17 +1,36 @@
-[core]
-	excludesfile = /home/alexa/.config/git/ignore
-	editor = vim
 [user]
-	email = alexa.dewit@gmail.com
 	name = Alexandra DeWit
-[merge]
-	tool = meld
+	email = alexa.dewit@gmail.com
+
 [pull]
 	rebase = true
 	default = current
+
+
 [alias]
 	pushf = push origin --force-with-lease
+
 [push]
 	default = current
-[branch]
-	autoSetupMerge = always
+
+[core]
+	excludesFile = ~/.gitignore
+	editor = vim
+
+[diff]
+  tool = vscode
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+  tool = vscode
+
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
